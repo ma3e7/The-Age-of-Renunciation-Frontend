@@ -21,7 +21,7 @@ body {
   }
 }
 
-/* ---------------- THEME (Tailwind v4) ---------------- */
+/* ---------------- THEME (Tailwind) ---------------- */
 @theme {
   --font-skranji: "skranji-web", sans-serif;
   --font-skranji-bold: "skranji-web-bold", sans-serif;
@@ -187,7 +187,7 @@ body {
 .three-body {
   --uib-size: 35px;
   --uib-speed: 0.8s;
-  --uib-color: #5d3fd3; /* možeš promijeniti u tvoju temu ako želiš */
+  --uib-color: #5d3fd3; 
 
   position: relative;
   display: inline-block;
