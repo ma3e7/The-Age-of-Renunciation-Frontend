@@ -42,7 +42,7 @@ const WorldPage = () => {
       <div className="h-dvh w-screen" id="clip">
         <div className="mask-clip-path about-image">
           <img
-            src="img/Gemini_Generated_Image_5x4v9r5x4v9r5x4v.png"
+            src="img/world-background.png"
             alt="Background" className="absolute left-0 top-0 size-full object-cover" />
         </div>
       </div>
