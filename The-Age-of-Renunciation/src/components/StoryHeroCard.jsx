@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { BentoTilt } from "./BentoTilt";
 
 const StoryHeroCard = ({ img, name, onClick }) => {
+    
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const [hoverOpacity, setHoverOpacity] = useState(0);
     const hoverRef = useRef(null);
