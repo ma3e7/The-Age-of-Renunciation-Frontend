@@ -34,6 +34,18 @@
       calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
     )
     translateZ(440px);
+  transform-style: preserve-3d;
+}
+
+.banner .slider .item .card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+}
+
+.banner .slider .item .back {
+  transform: rotateY(180deg);
 }
 
 .banner .slider .item img {

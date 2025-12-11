@@ -11,10 +11,10 @@ const Story = () => {
     const [heroes, setHeroes] = useState([])
 
     const heroImages = {
-        5: "/img/Veridia-Character.png",
-        6: "/img/Tarik-Character.png",
-        7: "/img/Volkan-Character.png",
-        8: "/img/Kaelus-Character.png",
+        9: "/img/Veridia-Character.png",
+        10: "/img/Tarik-Character.png",
+        11: "/img/Volkan-Character.png",
+        12: "/img/Kaelus-Character.png",
     }
 
 

@@ -80,7 +80,7 @@ const Hero = () => {
 
                 <div className={`${textPos} text-white`}>
                     <h1 className={title}>Age of Renunciation</h1>
-                    <p className={sub}>Enter the Crystal Forest.</p>
+                    <p className={sub}>Enter the Crystal Forest, where magic and machinery collide, and heroes forge their destinies.</p>
                 </div>
             </div>
 

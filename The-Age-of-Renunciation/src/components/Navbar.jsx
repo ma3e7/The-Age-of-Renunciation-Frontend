@@ -1,3 +1,4 @@
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import React, { useEffect, useRef, useState } from 'react';
 import Button from './Button';
 import { TiLocationArrow } from 'react-icons/ti';
@@ -8,20 +9,21 @@ const navItems = ['User Profile', 'About'];
 
 const Navbar = ({ isAuthenticated, onSignOut }) => {
     const navContainerRef = useRef(null);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const [lastScrollY, setLastScrollY] = useState(0)
     const [isNavVisible, setIsNavVisible] = useState(true)
-
-    const { y: currentScrollY} = useWindowScroll()
+    const { y: currentScrollY } = useWindowScroll()
 
     useEffect(() => {
-        if(currentScrollY === 0) {
+        if (currentScrollY === 0) {
             setIsNavVisible(true)
             navContainerRef.current.classList.remove('floating-nav')
         } else if (currentScrollY > lastScrollY) {
             setIsNavVisible(false)
             navContainerRef.current.classList.add('floating-nav')
-        } else if(currentScrollY < lastScrollY) {
+        } else if (currentScrollY < lastScrollY) {
             setIsNavVisible(true)
             navContainerRef.current.classList.add('floating-nav')
         }
@@ -30,11 +32,21 @@ const Navbar = ({ isAuthenticated, onSignOut }) => {
 
     useEffect(() => {
         gsap.to(navContainerRef.current, {
-            y: isNavVisible ? 0 : - 100,
+            y: isNavVisible ? 0 : -100,
             opacity: isNavVisible ? 1 : 0,
             duration: 0.3
         })
     }, [isNavVisible])
+
+    const handleSignOutClick = () => {
+        localStorage.removeItem("access");
+        localStorage.removeItem("refresh");
+        onSignOut();
+        navigate("/"); // redirect na home
+    };
+
+    // Sakrij 'About' ako smo na /profile ili /hero/:id
+    const hideAbout = location.pathname.startsWith("/profile") || location.pathname.startsWith("/hero/");
 
     return (
         <div
@@ -49,13 +61,15 @@ const Navbar = ({ isAuthenticated, onSignOut }) => {
                                     id="signin-button"
                                     title="Sign In"
                                     rightIcon={<TiLocationArrow />}
-                                    containerClass="bg-fog-grey! text-void-purple! md:flex hidden items-center justify-center gap-1 px-4 py-2"
+                                    onClick={() => document.getElementById("open-signin").click()}
+                                    containerClass="bg-fog-grey text-void-purple md:flex hidden items-center justify-center gap-1 px-4 py-2"
                                 />
                                 <Button
                                     id="signup-button"
                                     title="Sign Up"
                                     rightIcon={<TiLocationArrow />}
-                                    containerClass="bg-fog-grey! text-void-purple! md:flex hidden items-center justify-center gap-1 px-4 py-2"
+                                    onClick={() => document.getElementById("open-signup").click()}
+                                    containerClass="bg-fog-grey text-void-purple md:flex hidden items-center justify-center gap-1 px-4 py-2"
                                 />
                             </>
                         )}
@@ -64,29 +78,28 @@ const Navbar = ({ isAuthenticated, onSignOut }) => {
                             <Button
                                 id="signout-button"
                                 title="Sign Out"
-                                onClick={onSignOut}
+                                onClick={handleSignOutClick}
                                 rightIcon={<TiLocationArrow />}
-                                containerClass="bg-fog-grey! text-void-purple! md:flex hidden items-center justify-center gap-1 px-4 py-2"
-                            />
+                                containerClass="bg-fog-grey text-void-purple md:flex hidden items-center justify-center gap-1 px-4 py-2"/>
                         )}
                     </div>
 
                     <div className="flex h-full items-center">
-                        <div className="hidden md:block">
+                        <div className="hidden md:flex gap-5">
                             {navItems.map((item) => {
-                                if (item === 'User Profile') {
-                                    // HIDE OR DISABLE PROFILE IF USER NOT LOGGED IN
-                                    if (!isAuthenticated) return null;
-                                }
+                                if (item === 'User Profile' && !isAuthenticated) return null;
+                                if (item === 'About' && hideAbout) return null; // sakrij About
+
+                                const linkTo = item === "User Profile" ? "/profile" : `#${item.toLowerCase()}`;
 
                                 return (
-                                    <a
+                                    <Link
                                         key={item}
-                                        href={`#${item.toLowerCase()}`}
-                                        className="nav-hover-btn"
+                                        to={linkTo}
+                                        className="nav-hover-btn text-fog-grey hover:text-arcane-cyan transition-colors"
                                     >
                                         {item}
-                                    </a>
+                                    </Link>
                                 );
                             })}
                         </div>
