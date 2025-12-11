@@ -26,17 +26,17 @@ body {
   --font-skranji: "skranji-web", sans-serif;
   --font-skranji-bold: "skranji-web-bold", sans-serif;
 
-  --color-arcane-cyan: #00E0FF;
-  --color-runic-blue: #0090FF;
-  --color-deep-sapphire: #073B7A;
+  --color-arcane-cyan: #00e0ff;
+  --color-runic-blue: #0090ff;
+  --color-deep-sapphire: #073b7a;
 
-  --color-mystic-turquoise: #15C4B9;
-  --color-void-purple: #241A3E;
-  --color-steel-grey: #4A4F57;
+  --color-mystic-turquoise: #15c4b9;
+  --color-void-purple: #241a3e;
+  --color-steel-grey: #4a4f57;
 
-  --color-fog-grey: #DDE2E8;
-  --color-storm-black: #0C0F12;
-  --color-ash-grey: #8C8F93;
+  --color-fog-grey: #dde2e8;
+  --color-storm-black: #0c0f12;
+  --color-ash-grey: #8c8f93;
 }
 
 /* ---------------- UTILITIES ---------------- */
@@ -187,7 +187,7 @@ body {
 .three-body {
   --uib-size: 35px;
   --uib-speed: 0.8s;
-  --uib-color: #5d3fd3; 
+  --uib-color: #5d3fd3;
 
   position: relative;
   display: inline-block;
@@ -237,7 +237,7 @@ body {
   bottom: 0;
   left: 0;
   animation: wobble1 var(--uib-speed) infinite calc(var(--uib-speed) * -0.15)
-      ease-in-out;
+    ease-in-out;
 }
 
 .three-body__dot:nth-child(3) {
@@ -253,16 +253,34 @@ body {
 }
 
 @keyframes spin78236 {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes wobble1 {
-  0%, 100% { transform: translateY(0%) scale(1); opacity: 1; }
-  50% { transform: translateY(-66%) scale(0.65); opacity: 0.8; }
+  0%,
+  100% {
+    transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-66%) scale(0.65);
+    opacity: 0.8;
+  }
 }
 
 @keyframes wobble2 {
-  0%, 100% { transform: translateY(0%) scale(1); opacity: 1; }
-  50% { transform: translateY(66%) scale(0.65); opacity: 0.8; }
+  0%,
+  100% {
+    transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(66%) scale(0.65);
+    opacity: 0.8;
+  }
 }

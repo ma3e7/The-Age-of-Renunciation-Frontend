@@ -38,7 +38,7 @@ const HeroDetailPage = () => {
             </div>
 
             <div className="content">
-                <h1 data-content={heroName}>{heroName}</h1>
+                <h1 className="text-storm-black" data-content={heroName}>{heroName}</h1>
 
                 <div className="model-image">
                     <img src={modelImage} alt={`${heroName} model`} />
