@@ -48,38 +48,3 @@ const StoryHeroCard = ({ img, name, onClick }) => {
 };
 
 export default StoryHeroCard;
-Visual Style: Sophisticated, highly detailed cel-shading inspired by Arcane, emphasizing texture, atmosphere, and scale.
-
-Scene 1 – Majestic Coastal Cliffs:
-
-Towering cliffs rise from a shimmering ocean. Calm, misty waves lap at the base, while gentle fog creates a sense of mystical depth.
-
-Camera: slow sweeping crane shot gliding along the cliffs, highlighting the vastness and majesty of the coastline.
-
-Lighting: soft dusk tones with cool grays and blues, punctuated by warm golden sunlight filtering through clouds.
-
-Scene 2 – Enchanted Citadel Gardens:
-
-A sprawling citadel surrounded by lush, magical gardens filled with glowing flora and intricate architecture adorned with arcane runes.
-
-Camera: gentle dolly along winding paths and staircases, slowly pushing toward grand portals, emphasizing beauty and history.
-
-Atmosphere: drifting magical particles and subtle light reflections create a serene, immersive environment.
-
-Scene 3 – Elemental Valley:
-
-A mystical valley where natural and magical forces meet: sparkling blue rivers, glowing green mossy fields, and floating crystal formations emitting soft light.
-
-Camera: slow orbital movement around the valley, capturing ecological diversity and magical interactions.
-
-Vibe: majestic, awe-inspiring, serene; the world feels alive with wonder and mystery.
-
-Vibe & Technical Details:
-
-Focus: showcase world scale, environmental diversity, and magical ecosystems.
-
-Camera: slow, fluid, elegant movements—push-ins, dolly shots, and gentle orbits; no rapid cuts.
-
-Lighting: atmospheric depth with rich contrasts, evoking wonder and adventure.
-
-Goal: cinematic display of landscapes, architecture, magic, and ecological variety, balancing grandeur with intimate details.

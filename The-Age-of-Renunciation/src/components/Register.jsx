@@ -3,7 +3,7 @@ import { useState } from "react";
 const API = "http://127.0.0.1:8000/api/users";
 
 const Register = ({ onAuthChange }) => {
-    const [openModal, setOpenModal] = useState(null); // "signin" | "signup" | null
+    const [openModal, setOpenModal] = useState(null);
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
@@ -63,7 +63,6 @@ const Register = ({ onAuthChange }) => {
 
     return (
         <>
-            {/* Popup triggers */}
             <button
                 id="open-signin"
                 style={{ display: "none" }}

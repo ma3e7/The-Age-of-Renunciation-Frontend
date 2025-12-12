@@ -29,13 +29,12 @@ const WorldPage = () => {
   return (
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-        <h2 className="font-semibold text-sm uppercase md:text-[20px]">World of </h2>
+        <h2 className="font-semibold text-sm uppercase md:text-[20px]">Welcome to the</h2>
 
-        <AnimatedTitle title="OVDJE NEKI ZANIMLJIVI TEKST" containerClass="mt-5 !text-black text-center" />
+        <AnimatedTitle title="Shattered Realms of Aerathis" containerClass="mt-5 !text-black text-center" />
 
         <div className="about-subtext">
-          <p>NEKI TEKST ZA KAO KRAJ STRANICE</p>
-          <p>NEKI TEKST DA PRIVUCE KORISNIKA</p>
+          <p>Each region tells its own story echoes of ancient heroes, lost civilizations, and the raw power of elemental forces. Only the brave venture far enough to uncover the hidden wonders of this fractured world.</p>
         </div>
       </div>
 

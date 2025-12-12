@@ -42,10 +42,10 @@ const Navbar = ({ isAuthenticated, onSignOut }) => {
         localStorage.removeItem("access");
         localStorage.removeItem("refresh");
         onSignOut();
-        navigate("/"); // redirect na home
+        navigate("/"); 
     };
 
-    // Sakrij 'About' ako smo na /profile ili /hero/:id
+
     const hideAbout = location.pathname.startsWith("/profile") || location.pathname.startsWith("/hero/");
 
     return (

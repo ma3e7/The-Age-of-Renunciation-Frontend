@@ -85,10 +85,6 @@ const HeroDetailPage = () => {
     return (
         <>
             <div className="banner">
-                {/* <div
-                className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
-                style={{ backgroundImage: "url('/img/background-hero-showoff.png')" }}
-            /> */}
                 <div className="slider" style={{ "--quantity": "5" }}>
                     {abilityImages.map((src, index) => (
                         <div className="item" key={index} style={{ "--position": (index + 1).toString() }}>

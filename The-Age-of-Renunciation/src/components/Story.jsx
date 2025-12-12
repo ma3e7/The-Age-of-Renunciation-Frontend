@@ -48,12 +48,12 @@ const Story = () => {
     return (
         <section id="story" className='min-h-dvh w-screen bg-storm-black text-fog-grey'>
             <div className='flex size-full flex-col items-center pb-24'>
-                <p className='font-skranji text-sm uppercase md:text-[10px]'>
-                    Some intro for the title for the gameplay
+                <p className='font-skranji text-xl uppercase md:text-[10px]'>
+                    Meet the
                 </p>
                 <div className='relative size-full'>
                     <AnimatedTitle
-                        title="Some title for the gameplay"
+                        title="Legends of Aerathis"
                         sectionId="#story"
                         containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
                     />
@@ -79,16 +79,27 @@ const Story = () => {
                     </div>
                 </div>
 
-                <div className=' w-full flex justify-center gap-6 flex-wrap'>
+                <div className="max-w-3xl mt-6 text-center text-lg md:text-base text-fog-grey/80 px-4">
+                    <p>
+                        For centuries, the world of Aerathis was united under the Arcane Concord, a fragile balance of elemental power and mortal will. But ambition, greed, and forbidden magics shattered the peace, creating a realm divided between light and shadow.
+                    </p>
+                    <p className="mt-3">
+                        Heroes rise where kingdoms fall. From the luminous Crystal Forest to the storm-lashed cliffs of the Shattered Coast, every hero must confront their destiny and choose: succumb to the darkness, or embrace the path of renunciation.
+                    </p>
+                </div>
+
+
+                <div className='w-full flex justify-center gap-6 flex-wrap mt-8 pb-12'>
                     {heroes.map((hero) => (
                         <StoryHeroCard
                             key={hero.id}
-                            img={heroImages[hero.id]} 
+                            img={heroImages[hero.id]}
                             name={hero.hero_name}
                             onClick={() => navigate(`/hero/${hero.id}`)}
                         />
                     ))}
                 </div>
+
             </div>
         </section>
     )
